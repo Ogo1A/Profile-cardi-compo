@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-grayish: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+.container {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-cyan);
+  color: var(--very-dark-blue);
+}
+.top-bg {
+  position: absolute;
+  width: 978px;
+  height: 978px;
+  top: -528px;
+  left: -284px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background: url(images/bg-pattern-top.svg);
+}
+.bottom-bg {
+  position: absolute;
+  background: url(images/bg-pattern-bottom.svg);
+  width: 978px;
+  height: 978px;
+  bottom: -628px;
+  right: -254px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card {
+  background: white;
+  height: 376px;
+  border-radius: 20px;
+  width: 350px;
+  position: relative;
+}
+.card .ba-img {
+  height: 142px;
+  border-radius: 20px 20px 0 0;
+  background: url(images/bg-pattern-card.svg);
+}
+.profile .pic {
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  padding: 5px;
+  background: white;
+  top: 94px;
+  position: absolute;
+}
+.profile .pic img {
+  border-radius: 50%;
+}
+.profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 74px;
+}
+.profile {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--dark-gray);
+  padding-bottom: 25px;
+}
+.profile .name {
+  color: var(--dark-grayish);
+
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.profile .name span {
+  font-weight: 700;
+}
+.profile .location {
+  color: var(--dark-grayish);
+}
+.stats {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-top: 23px;
+  justify-content: space-evenly;
+}
+
+.stats .number {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  color: var(--very-dark-blue);
+}
+.stats p {
+  color: var(--dark-grayish);
+}
+@media (max-width: 375px) {
+  .top-bg {
+    height: 375px;
+    width: 375px;
+    top: -160px;
+    left: -168px;
+  }
+  .bottom-bg {
+    height: 375px;
+    width: 375px;
+    bottom: -160px;
+    right: -78px;
+  }
+}
